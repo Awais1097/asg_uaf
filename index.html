@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Agrivarsity Scouts Group UAF is a University of Agriculture Faisalabad scouting and youth leadership organization focused on leadership, service, discipline, rescue training, and community welfare."
+    />
+    <meta name="theme-color" content="#123c25" />
+    <title>Agrivarsity Scouts Group UAF | Leadership • Service • Discipline</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="announcement" role="status">
+      <span>Admissions open for Spring Scouts Induction Camp 2026</span>
+      <a href="#join">Register now</a>
+    </div>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Agrivarsity Scouts Group UAF home">
+          <span class="logo-slot" aria-hidden="true">AS</span>
+          <span>
+            <strong>Agrivarsity Scouts Group UAF</strong>
+            <small>University of Agriculture Faisalabad</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#about">About</a>
+          <a href="#activities">Activities</a>
+          <a href="#events">Events</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#team">Team</a>
+          <a href="#join">Join</a>
+          <a href="#blog">News</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-button" type="button" data-search-open aria-label="Open search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" /></svg>
+          </button>
+          <button class="icon-button" type="button" data-notifications aria-label="Open notifications">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM13.7 21a2 2 0 0 1-3.4 0" /></svg>
+          </button>
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Toggle dark mode">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z" /></svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <aside class="notification-panel" data-notification-panel aria-label="Notifications">
+      <div class="panel-head">
+        <strong>Notifications</strong>
+        <button type="button" data-panel-close aria-label="Close notifications">×</button>
+      </div>
+      <ul>
+        <li><b>Campfire Night</b><span>Registration closes May 22, 2026.</span></li>
+        <li><b>First Aid Drill</b><span>Uniform inspection at 08:30 AM.</span></li>
+        <li><b>Certificates</b><span>Winter service certificates are ready.</span></li>
+      </ul>
+    </aside>
+
+    <div class="search-modal" data-search-modal aria-hidden="true">
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search website">
+        <button type="button" data-search-close aria-label="Close search">×</button>
+        <label for="site-search">Search Agrivarsity Scouts</label>
+        <input id="site-search" type="search" placeholder="Try campfire, rescue, membership..." data-search-input />
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+
+    <div class="event-modal" data-event-modal aria-hidden="true">
+      <form class="event-form" role="dialog" aria-modal="true" aria-labelledby="event-form-title" data-event-form>
+        <button type="button" data-event-close aria-label="Close event registration">×</button>
+        <span class="section-label">Event Registration</span>
+        <h2 id="event-form-title">Register for Event</h2>
+        <label>Selected Event <input name="event" type="text" readonly data-event-name /></label>
+        <label>Full Name <input required name="name" type="text" placeholder="Your name" /></label>
+        <label>Department <input required name="department" type="text" placeholder="Department / degree" /></label>
+        <label>Email <input required name="email" type="email" placeholder="name@example.com" /></label>
+        <label>Phone / WhatsApp <input required name="phone" type="tel" placeholder="+92 300 0000000" /></label>
+        <button class="btn primary" type="submit">Submit Event Registration</button>
+        <p class="form-status" data-event-status aria-live="polite"></p>
+      </form>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-photo main-photo"></div>
+          <div class="hero-collage">
+            <div class="hero-photo rescue-photo"></div>
+            <div class="hero-photo service-photo"></div>
+            <div class="hero-photo hiking-photo"></div>
+          </div>
+        </div>
+        <div class="hero-content reveal">
+          <div class="logo-row" aria-label="Official logo placeholders">
+            <span class="logo-slot large">UAF</span>
+            <span class="logo-slot large">BSA</span>
+          </div>
+          <h1 id="hero-title">Agrivarsity Scouts Group UAF</h1>
+          <p class="subtitle">Leadership • Service • Discipline</p>
+          <p class="quote"><span data-typed>Service Before Self</span></p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#join">Join Scouts</a>
+            <a class="btn secondary" href="#activities">Explore Activities</a>
+            <a class="btn gold" href="#events">Upcoming Events</a>
+          </div>
+          <div class="hero-meta">
+            <span>University of Agriculture Faisalabad, Pakistan</span>
+            <span>Prepared for service, rescue, discipline, and leadership.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-preview" id="about" aria-labelledby="about-title">
+        <div class="media-blob reveal">
+          <div class="campus-image"></div>
+        </div>
+        <div class="section-copy reveal">
+          <span class="section-label">About Us</span>
+          <h2 id="about-title">Building better leaders for a better tomorrow</h2>
+          <p>
+            Agrivarsity Scouts Group UAF develops responsible university youth through outdoor training,
+            rescue readiness, community service, teamwork, and disciplined leadership.
+          </p>
+          <div class="value-strip">
+            <span>Leadership</span>
+            <span>Discipline</span>
+            <span>Teamwork</span>
+            <span>Community Service</span>
+          </div>
+          <a class="text-link" href="#history">Read More About Us</a>
+        </div>
+      </section>
+
+      <section class="section dark-band" id="activities" aria-labelledby="activities-title">
+        <div class="section-heading reveal">
+          <span class="section-label">Our Activities</span>
+          <h2 id="activities-title">Skills for life. Values for eternity.</h2>
+          <p>Training that builds confidence, public service, outdoor skill, and operational discipline.</p>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card reveal">
+            <div class="card-image campfire"></div>
+            <div class="icon-badge">△</div>
+            <h3>Campfires</h3>
+            <p>Team bonding, cultural performances, patrol songs, and night leadership circles.</p>
+            <time datetime="2026-07-05">Jul 05, 2026</time>
+            <button type="button" data-gallery-filter="Campfire">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image rescue"></div>
+            <div class="icon-badge">✚</div>
+            <h3>Rescue & First Aid Training</h3>
+            <p>CPR, bandaging, emergency response drills, stretcher movement, and safety protocol.</p>
+            <time datetime="2026-06-07">Jun 07, 2026</time>
+            <button type="button" data-gallery-filter="Rescue Training">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image hiking"></div>
+            <div class="icon-badge">⌁</div>
+            <h3>Hiking & Adventure Trips</h3>
+            <p>Navigation, trail discipline, survival routines, fitness, and environmental awareness.</p>
+            <time datetime="2026-05-24">May 24, 2026</time>
+            <button type="button" data-gallery-filter="Hiking">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image blood"></div>
+            <div class="icon-badge">♥</div>
+            <h3>Blood Donation Camps</h3>
+            <p>Student volunteer mobilization with campus health partners and donor care teams.</p>
+            <time datetime="2026-08-14">Aug 14, 2026</time>
+            <button type="button" data-gallery-filter="Social Work">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image welfare"></div>
+            <div class="icon-badge">✦</div>
+            <h3>Community Welfare Projects</h3>
+            <p>Cleanups, food drives, flood relief support, awareness walks, and local outreach.</p>
+            <time datetime="2026-09-12">Sep 12, 2026</time>
+            <button type="button" data-gallery-filter="Social Work">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image leadership"></div>
+            <div class="icon-badge">★</div>
+            <h3>Leadership Workshops</h3>
+            <p>Communication, event command, patrol management, public speaking, and ethics.</p>
+            <time datetime="2026-07-19">Jul 19, 2026</time>
+            <button type="button" data-gallery-filter="Ceremonies">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image eventmgmt"></div>
+            <div class="icon-badge">⚑</div>
+            <h3>University Event Management</h3>
+            <p>Protocol, crowd guidance, ceremonial duty, reception lines, and campus logistics.</p>
+            <time datetime="2026-10-03">Oct 03, 2026</time>
+            <button type="button" data-gallery-filter="Ceremonies">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image competition"></div>
+            <div class="icon-badge">◎</div>
+            <h3>National Scout Competitions</h3>
+            <p>Drill, camping, knots, rescue simulation, quiz, and leadership challenge teams.</p>
+            <time datetime="2026-11-20">Nov 20, 2026</time>
+            <button type="button" data-gallery-filter="Competitions">Gallery</button>
+          </article>
+          <article class="activity-card reveal">
+            <div class="card-image environment"></div>
+            <div class="icon-badge">♧</div>
+            <h3>Environmental Campaigns</h3>
+            <p>Tree plantation, campus cleanliness, water conservation, and climate awareness.</p>
+            <time datetime="2026-06-21">Jun 21, 2026</time>
+            <button type="button" data-gallery-filter="Social Work">Gallery</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section events-section" id="events" aria-labelledby="events-title">
+        <div class="split-heading reveal">
+          <div>
+            <span class="section-label">Upcoming Events</span>
+            <h2 id="events-title">Training calendar and registration</h2>
+          </div>
+          <a class="text-link" href="#join">Register for induction</a>
+        </div>
+
+        <div class="event-layout">
+          <div class="event-slider reveal" data-slider>
+            <article class="event-card is-active">
+              <div class="event-date"><b>24</b><span>May</span></div>
+              <h3>Hiking Expedition</h3>
+              <p>Margalla Hills, Islamabad • 07:00 AM</p>
+              <button class="event-register" type="button" data-event-register>Register Now</button>
+            </article>
+            <article class="event-card">
+              <div class="event-date"><b>07</b><span>Jun</span></div>
+              <h3>First Aid Training Workshop</h3>
+              <p>UAF Health Center • 09:00 AM</p>
+              <button class="event-register" type="button" data-event-register>Register Now</button>
+            </article>
+            <article class="event-card">
+              <div class="event-date"><b>21</b><span>Jun</span></div>
+              <h3>Tree Plantation Drive</h3>
+              <p>UAF Campus • 08:00 AM</p>
+              <button class="event-register" type="button" data-event-register>Register Now</button>
+            </article>
+            <article class="event-card">
+              <div class="event-date"><b>05</b><span>Jul</span></div>
+              <h3>Scouts Campfire 2026</h3>
+              <p>Scout Lawn, UAF • 07:30 PM</p>
+              <button class="event-register" type="button" data-event-register>Register Now</button>
+            </article>
+            <div class="slider-controls">
+              <button type="button" data-prev aria-label="Previous event">‹</button>
+              <button type="button" data-next aria-label="Next event">›</button>
+            </div>
+          </div>
+
+          <aside class="countdown-card reveal">
+            <span class="section-label">Major Event</span>
+            <h3>Campfire Night Showcase</h3>
+            <p>Patrol performances, oath renewal, awards, and leadership address.</p>
+            <div class="countdown" data-countdown="2026-07-05T19:30:00">
+              <span><b data-days>00</b>Days</span>
+              <span><b data-hours>00</b>Hours</span>
+              <span><b data-minutes>00</b>Min</span>
+              <span><b data-seconds>00</b>Sec</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="archive-table reveal" aria-label="Past events archive">
+          <div class="table-row table-head"><span>Past Event</span><span>Type</span><span>Outcome</span></div>
+          <div class="table-row"><span>Winter Survival Camp</span><span>Training</span><span>68 scouts certified</span></div>
+          <div class="table-row"><span>Flood Relief Mobilization</span><span>Service</span><span>1,200 ration packs sorted</span></div>
+          <div class="table-row"><span>Inter-University Drill Meet</span><span>Competition</span><span>Runner-up patrol trophy</span></div>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Achievements">
+        <div><strong data-counter="850">0</strong><span>Active Members</span></div>
+        <div><strong data-counter="120">0</strong><span>Events Conducted</span></div>
+        <div><strong data-counter="45">0</strong><span>Rescue Trainings</span></div>
+        <div><strong data-counter="18000">0</strong><span>Community Service Hours</span></div>
+      </section>
+
+      <section class="section detail-section" id="history" aria-labelledby="history-title">
+        <div class="section-heading reveal">
+          <span class="section-label">Organization</span>
+          <h2 id="history-title">History, mission, oath, and structure</h2>
+        </div>
+        <div class="detail-grid">
+          <article class="glass-card reveal">
+            <h3>History</h3>
+            <p>
+              Founded by service-minded students at UAF, the group has grown into a campus platform for
+              scouting, emergency readiness, community welfare, and leadership development.
+            </p>
+          </article>
+          <article class="glass-card reveal">
+            <h3>Mission & Vision</h3>
+            <p>
+              To train disciplined youth leaders who serve Pakistan with courage, integrity, and practical
+              skills while strengthening the university community.
+            </p>
+          </article>
+          <article class="glass-card reveal">
+            <h3>Scout Oath</h3>
+            <p>
+              On my honour, I will do my best to serve Allah, Pakistan, and humanity; help others; and obey
+              the scout law.
+            </p>
+          </article>
+          <article class="glass-card reveal">
+            <h3>Scout Law</h3>
+            <p>
+              Trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave,
+              clean, and reverent.
+            </p>
+          </article>
+        </div>
+        <div class="leader-message reveal">
+          <div class="profile-avatar"></div>
+          <div>
+            <h3>Message from the Group Leader</h3>
+            <p>
+              “Our duty is to convert youthful energy into service, discipline, and useful leadership for the
+              university and the country.”
+            </p>
+          </div>
+        </div>
+        <div class="org-structure reveal">
+          <span>Patron</span>
+          <span>Group Leader</span>
+          <span>Executive Body</span>
+          <span>Patrol Leaders</span>
+          <span>Volunteer Scouts</span>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="split-heading reveal">
+          <div>
+            <span class="section-label">Gallery</span>
+            <h2 id="gallery-title">Moments that inspire</h2>
+          </div>
+          <div class="filter-tabs" aria-label="Gallery categories">
+            <button class="is-active" type="button" data-filter="All">All</button>
+            <button type="button" data-filter="Campfire">Campfire</button>
+            <button type="button" data-filter="Rescue Training">Rescue</button>
+            <button type="button" data-filter="Hiking">Hiking</button>
+            <button type="button" data-filter="Social Work">Social</button>
+            <button type="button" data-filter="Competitions">Competitions</button>
+          </div>
+        </div>
+        <div class="masonry-gallery">
+          <button class="gallery-item tall hiking-img" data-category="Hiking" data-title="Mountain hiking patrol" aria-label="Preview Mountain hiking patrol"></button>
+          <button class="gallery-item rescue-img" data-category="Rescue Training" data-title="Rope rescue drill" aria-label="Preview Rope rescue drill"></button>
+          <button class="gallery-item campfire-img" data-category="Campfire" data-title="Campfire night circle" aria-label="Preview Campfire night circle"></button>
+          <button class="gallery-item social-img" data-category="Social Work" data-title="Tree plantation team" aria-label="Preview Tree plantation team"></button>
+          <button class="gallery-item ceremony-img" data-category="Ceremonies" data-title="Oath ceremony" aria-label="Preview Oath ceremony"></button>
+          <button class="gallery-item competition-img" data-category="Competitions" data-title="National scout competition" aria-label="Preview National scout competition"></button>
+          <button class="gallery-item video-img" data-category="Campfire" data-title="Video: annual campfire highlights" aria-label="Preview annual campfire highlights video"><span>▶</span></button>
+        </div>
+      </section>
+
+      <section class="section team-section" id="team" aria-labelledby="team-title">
+        <div class="section-heading reveal">
+          <span class="section-label">Team</span>
+          <h2 id="team-title">Leadership team and patrol command</h2>
+        </div>
+        <div class="team-grid">
+          <article class="profile-card reveal">
+            <div class="profile-photo p1"></div>
+            <h3>Muhammad Hamza</h3>
+            <span>Senior Patrol Leader</span>
+            <p>Coordinates patrol training, induction discipline, and event command.</p>
+            <div class="socials"><a href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" aria-label="Facebook">f</a><a href="https://linkedin.com" aria-label="LinkedIn">in</a><a href="mailto:scouts@uaf.edu.pk" aria-label="Email">@</a></div>
+          </article>
+          <article class="profile-card reveal">
+            <div class="profile-photo p2"></div>
+            <h3>Ayesha Noor</h3>
+            <span>Troop Guide</span>
+            <p>Leads mentoring, welfare campaigns, and scout learning circles.</p>
+            <div class="socials"><a href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" aria-label="Facebook">f</a><a href="https://linkedin.com" aria-label="LinkedIn">in</a><a href="mailto:scouts@uaf.edu.pk" aria-label="Email">@</a></div>
+          </article>
+          <article class="profile-card reveal">
+            <div class="profile-photo p3"></div>
+            <h3>Usman Ali</h3>
+            <span>Rescue Training Lead</span>
+            <p>Manages first aid drills, safety briefings, and emergency practice.</p>
+            <div class="socials"><a href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" aria-label="Facebook">f</a><a href="https://linkedin.com" aria-label="LinkedIn">in</a><a href="mailto:scouts@uaf.edu.pk" aria-label="Email">@</a></div>
+          </article>
+          <article class="profile-card reveal">
+            <div class="profile-photo p4"></div>
+            <h3>Sana Tariq</h3>
+            <span>Volunteer Coordinator</span>
+            <p>Organizes community service rosters and partner outreach.</p>
+            <div class="socials"><a href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" aria-label="Facebook">f</a><a href="https://linkedin.com" aria-label="LinkedIn">in</a><a href="mailto:scouts@uaf.edu.pk" aria-label="Email">@</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section join-section" id="join" aria-labelledby="join-title">
+        <div class="join-copy reveal">
+          <span class="section-label">Join Scouts</span>
+          <h2 id="join-title">Become part of a legacy of service</h2>
+          <p>Membership is open to UAF students who can commit to training, discipline, service, and teamwork.</p>
+          <ul class="benefit-list">
+            <li>Leadership and patrol responsibility</li>
+            <li>Rescue, first aid, and outdoor training</li>
+            <li>Certificates, service hours, and university representation</li>
+          </ul>
+          <div class="timeline" aria-label="Training process timeline">
+            <span>Apply</span><span>Interview</span><span>Basic Training</span><span>Oath</span><span>Service Duty</span>
+          </div>
+        </div>
+        <form class="registration-form reveal" data-register-form>
+          <h3>Membership Registration</h3>
+          <label>Full Name <input required name="name" type="text" placeholder="Your name" /></label>
+          <label>Department <input required name="department" type="text" placeholder="Department / degree" /></label>
+          <label>Email <input required name="email" type="email" placeholder="name@example.com" /></label>
+          <label>Interest
+            <select required name="interest">
+              <option value="">Select one</option>
+              <option>Rescue Training</option>
+              <option>Community Service</option>
+              <option>Hiking & Camping</option>
+              <option>Event Management</option>
+            </select>
+          </label>
+          <button class="btn primary" type="submit">Submit Registration</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section faq-section" aria-labelledby="faq-title">
+        <div class="section-heading reveal">
+          <span class="section-label">FAQ</span>
+          <h2 id="faq-title">Requirements and training process</h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>Who can join?</summary>
+            <p>Current UAF students with good conduct, availability for training, and willingness to serve.</p>
+          </details>
+          <details class="reveal">
+            <summary>Is prior scouting experience required?</summary>
+            <p>No. Basic training covers discipline, patrol work, first aid, knots, camping, and service duty.</p>
+          </details>
+          <details class="reveal">
+            <summary>Are certificates available?</summary>
+            <p>Certificates are issued for approved trainings, service drives, competitions, and major events.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section dashboard-section" id="resources" aria-labelledby="dashboard-title">
+        <div class="section-heading reveal">
+          <span class="section-label">Admin & Resources</span>
+          <h2 id="dashboard-title">Management system UI concept</h2>
+        </div>
+        <div class="dashboard-shell reveal">
+          <aside>
+            <b>Admin</b>
+            <span class="is-selected">Events</span>
+            <span>Members</span>
+            <span>Certificates</span>
+            <span>Announcements</span>
+          </aside>
+          <div class="dashboard-main">
+            <div class="dashboard-toolbar">
+              <strong>Event Management</strong>
+              <button type="button">Create Event</button>
+            </div>
+            <div class="resource-cards">
+              <article><b>156</b><span>Pending registrations</span></article>
+              <article><b>42</b><span>Certificates ready</span></article>
+              <article><b>09</b><span>Active announcements</span></article>
+            </div>
+            <div class="mini-table">
+              <span>Campfire Night</span><span>Open</span><span>247 registered</span>
+              <span>First Aid Workshop</span><span>Waitlist</span><span>80 registered</span>
+              <span>Tree Plantation</span><span>Open</span><span>120 registered</span>
+            </div>
+          </div>
+        </div>
+        <div class="downloads reveal">
+          <a href="#join">Download membership form</a>
+          <a href="#activities">Download scout badge guide</a>
+          <a href="#events">Download training calendar</a>
+        </div>
+      </section>
+
+      <section class="section blog-section" id="blog" aria-labelledby="blog-title">
+        <div class="split-heading reveal">
+          <div>
+            <span class="section-label">Blog / News</span>
+            <h2 id="blog-title">Updates, achievements, and service reports</h2>
+          </div>
+          <a class="text-link" href="#contact">Submit a story</a>
+        </div>
+        <div class="blog-grid">
+          <article class="news-card reveal"><span>Scouting</span><h3>How patrol leadership shapes confident graduates</h3><p>Practical lessons from camp duty, briefing circles, and service assignments.</p></article>
+          <article class="news-card reveal"><span>Achievement</span><h3>UAF scouts recognized for campus service response</h3><p>Executive body receives appreciation after emergency event support.</p></article>
+          <article class="news-card reveal"><span>Community</span><h3>Service report: tree plantation and cleanliness drive</h3><p>Volunteers completed a combined environmental campaign across campus zones.</p></article>
+        </div>
+      </section>
+
+      <section class="section facebook-section" id="facebook-feed" aria-labelledby="facebook-title">
+        <div class="split-heading reveal">
+          <div>
+            <span class="section-label">Facebook Live Feed</span>
+            <h2 id="facebook-title">Latest page posts and events</h2>
+          </div>
+          <a class="text-link" href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" target="_blank" rel="noopener">View all posts on Facebook</a>
+        </div>
+        <div class="facebook-feed-card reveal">
+          <iframe
+            title="Agrivarsity Scouts Group UAF Facebook posts and events"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAgrivarsityScoutsGroupUAF%2F&tabs=timeline%2Cevents&width=500&height=720&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            width="500"
+            height="720"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+          <div class="facebook-feed-copy">
+            <h3>Auto-updated from the official Facebook page</h3>
+            <p>
+              The feed is loaded directly from Facebook, so new page posts and page events appear here automatically.
+              Facebook controls the feed order and shows the latest timeline activity first.
+            </p>
+            <ul>
+              <li>Latest posts appear at the top.</li>
+              <li>Events tab is included for page events.</li>
+              <li>Full post archive opens on Facebook.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials-section" aria-labelledby="testimonials-title">
+        <div class="section-heading reveal">
+          <span class="section-label">Testimonials</span>
+          <h2 id="testimonials-title">Voices of our scouts</h2>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote class="reveal">Scouting taught me discipline, leadership, and the joy of serving others.<cite>Muhammad Hamza</cite></blockquote>
+          <blockquote class="reveal">Every camp and rescue drill builds confidence that stays beyond university.<cite>Ayesha Noor</cite></blockquote>
+          <blockquote class="reveal">Community service made me understand leadership as responsibility.<cite>Usman Ali</cite></blockquote>
+        </div>
+      </section>
+
+      <section class="partners" aria-label="Sponsors and partners">
+        <span>University of Agriculture Faisalabad</span>
+        <span>Pakistan Boy Scouts Association</span>
+        <span>UAF Health Center</span>
+        <span>Engro Foundation</span>
+        <span>District Rescue Partners</span>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy reveal">
+          <span class="section-label">Contact</span>
+          <h2 id="contact-title">Reach Agrivarsity Scouts Group UAF</h2>
+          <p>Scout Office, UAF Campus, Faisalabad, Pakistan</p>
+          <p><a href="mailto:scouts@uaf.edu.pk">scouts@uaf.edu.pk</a> • <a href="tel:+92920016170">+92 41 9200161-70</a></p>
+          <div class="map-frame" title="Google map placeholder">University of Agriculture Faisalabad map embed area</div>
+          <div class="facebook-embed">
+            <iframe
+              title="Agrivarsity Scouts Group UAF Facebook page"
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAgrivarsityScoutsGroupUAF%2F&tabs=timeline&width=500&height=360&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
+              width="500"
+              height="360"
+              style="border:none;overflow:hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        </div>
+        <form class="contact-form reveal">
+          <h3>Send a message</h3>
+          <label>Name <input type="text" required /></label>
+          <label>Email <input type="email" required /></label>
+          <label>Message <textarea rows="5" required></textarea></label>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <span class="logo-slot">AS</span>
+          <span><strong>Agrivarsity Scouts Group UAF</strong><small>Leadership • Service • Discipline</small></span>
+        </a>
+        <p>Committed to building better leaders through values of scouting.</p>
+      </div>
+      <div>
+        <h2>Quick Links</h2>
+        <a href="#about">About Us</a>
+        <a href="#activities">Activities</a>
+        <a href="#events">Events</a>
+        <a href="#join">Join Scouts</a>
+      </div>
+      <div>
+        <h2>Resources</h2>
+        <a href="#resources">Downloads</a>
+        <a href="#resources">Certificates</a>
+        <a href="#blog">News</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <div class="socials"><a href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" aria-label="Facebook">f</a><a href="https://linkedin.com" aria-label="LinkedIn">in</a><a href="https://youtube.com" aria-label="YouTube">yt</a><a href="https://instagram.com" aria-label="Instagram">ig</a></div>
+        <p>Multilingual-ready structure for English, Urdu, and regional content.</p>
+      </div>
+    </footer>
+
+    <div class="lightbox" data-lightbox aria-hidden="true">
+      <button type="button" data-lightbox-close aria-label="Close preview">×</button>
+      <div data-lightbox-image></div>
+      <p data-lightbox-title></p>
+    </div>
+
+    <button class="to-top" type="button" data-to-top aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
