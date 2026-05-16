@@ -1,0 +1,204 @@
+{
+  "activities": [
+    {
+      "title": "Campfires",
+      "description": "Team bonding, cultural performances, patrol songs, and night leadership circles.",
+      "date": "Jul 05, 2026",
+      "datetime": "2026-07-05",
+      "category": "Campfire",
+      "imageClass": "campfire",
+      "icon": "△"
+    },
+    {
+      "title": "Rescue & First Aid Training",
+      "description": "CPR, bandaging, emergency response drills, stretcher movement, and safety protocol.",
+      "date": "Jun 07, 2026",
+      "datetime": "2026-06-07",
+      "category": "Rescue Training",
+      "imageClass": "rescue",
+      "icon": "✚"
+    },
+    {
+      "title": "Hiking & Adventure Trips",
+      "description": "Navigation, trail discipline, survival routines, fitness, and environmental awareness.",
+      "date": "May 24, 2026",
+      "datetime": "2026-05-24",
+      "category": "Hiking",
+      "imageClass": "hiking",
+      "icon": "⌁"
+    },
+    {
+      "title": "Blood Donation Camps",
+      "description": "Student volunteer mobilization with campus health partners and donor care teams.",
+      "date": "Aug 14, 2026",
+      "datetime": "2026-08-14",
+      "category": "Social Work",
+      "imageClass": "blood",
+      "icon": "♥"
+    },
+    {
+      "title": "Community Welfare Projects",
+      "description": "Cleanups, food drives, flood relief support, awareness walks, and local outreach.",
+      "date": "Sep 12, 2026",
+      "datetime": "2026-09-12",
+      "category": "Social Work",
+      "imageClass": "welfare",
+      "icon": "✦"
+    },
+    {
+      "title": "Leadership Workshops",
+      "description": "Communication, event command, patrol management, public speaking, and ethics.",
+      "date": "Jul 19, 2026",
+      "datetime": "2026-07-19",
+      "category": "Ceremonies",
+      "imageClass": "leadership",
+      "icon": "★"
+    },
+    {
+      "title": "University Event Management",
+      "description": "Protocol, crowd guidance, ceremonial duty, reception lines, and campus logistics.",
+      "date": "Oct 03, 2026",
+      "datetime": "2026-10-03",
+      "category": "Ceremonies",
+      "imageClass": "eventmgmt",
+      "icon": "⚑"
+    },
+    {
+      "title": "National Scout Competitions",
+      "description": "Drill, camping, knots, rescue simulation, quiz, and leadership challenge teams.",
+      "date": "Nov 20, 2026",
+      "datetime": "2026-11-20",
+      "category": "Competitions",
+      "imageClass": "competition",
+      "icon": "◎"
+    },
+    {
+      "title": "Environmental Campaigns",
+      "description": "Tree plantation, campus cleanliness, water conservation, and climate awareness.",
+      "date": "Jun 21, 2026",
+      "datetime": "2026-06-21",
+      "category": "Social Work",
+      "imageClass": "environment",
+      "icon": "♧"
+    }
+  ],
+  "events": [
+    {
+      "day": "24",
+      "month": "May",
+      "title": "Hiking Expedition",
+      "description": "Margalla Hills, Islamabad • 07:00 AM"
+    },
+    {
+      "day": "07",
+      "month": "Jun",
+      "title": "First Aid Training Workshop",
+      "description": "UAF Health Center • 09:00 AM"
+    },
+    {
+      "day": "21",
+      "month": "Jun",
+      "title": "Tree Plantation Drive",
+      "description": "UAF Campus • 08:00 AM"
+    },
+    {
+      "day": "05",
+      "month": "Jul",
+      "title": "Scouts Campfire 2026",
+      "description": "Scout Lawn, UAF • 07:30 PM"
+    }
+  ],
+  "majorEvent": {
+    "label": "Major Event",
+    "title": "Campfire Night Showcase",
+    "description": "Patrol performances, oath renewal, awards, and leadership address.",
+    "datetime": "2026-07-05T19:30:00"
+  },
+  "pastEvents": [
+    {
+      "name": "Winter Survival Camp",
+      "type": "Training",
+      "outcome": "68 scouts certified"
+    },
+    {
+      "name": "Flood Relief Mobilization",
+      "type": "Service",
+      "outcome": "1,200 ration packs sorted"
+    },
+    {
+      "name": "Inter-University Drill Meet",
+      "type": "Competition",
+      "outcome": "Runner-up patrol trophy"
+    }
+  ],
+  "stats": [
+    { "label": "Active Members", "value": 850 },
+    { "label": "Events Conducted", "value": 120 },
+    { "label": "Rescue Trainings", "value": 45 },
+    { "label": "Community Service Hours", "value": 18000 }
+  ],
+  "team": [
+    {
+      "name": "Muhammad Hamza",
+      "position": "Senior Patrol Leader",
+      "bio": "Coordinates patrol training, induction discipline, and event command.",
+      "photoClass": "p1"
+    },
+    {
+      "name": "Ayesha Noor",
+      "position": "Troop Guide",
+      "bio": "Leads mentoring, welfare campaigns, and scout learning circles.",
+      "photoClass": "p2"
+    },
+    {
+      "name": "Usman Ali",
+      "position": "Rescue Training Lead",
+      "bio": "Manages first aid drills, safety briefings, and emergency practice.",
+      "photoClass": "p3"
+    },
+    {
+      "name": "Sana Tariq",
+      "position": "Volunteer Coordinator",
+      "bio": "Organizes community service rosters and partner outreach.",
+      "photoClass": "p4"
+    }
+  ],
+  "news": [
+    {
+      "category": "Scouting",
+      "title": "How patrol leadership shapes confident graduates",
+      "description": "Practical lessons from camp duty, briefing circles, and service assignments."
+    },
+    {
+      "category": "Achievement",
+      "title": "UAF scouts recognized for campus service response",
+      "description": "Executive body receives appreciation after emergency event support."
+    },
+    {
+      "category": "Community",
+      "title": "Service report: tree plantation and cleanliness drive",
+      "description": "Volunteers completed a combined environmental campaign across campus zones."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Scouting taught me discipline, leadership, and the joy of serving others.",
+      "name": "Muhammad Hamza"
+    },
+    {
+      "quote": "Every camp and rescue drill builds confidence that stays beyond university.",
+      "name": "Ayesha Noor"
+    },
+    {
+      "quote": "Community service made me understand leadership as responsibility.",
+      "name": "Usman Ali"
+    }
+  ],
+  "partners": [
+    "University of Agriculture Faisalabad",
+    "Pakistan Boy Scouts Association",
+    "UAF Health Center",
+    "Engro Foundation",
+    "District Rescue Partners"
+  ]
+}
