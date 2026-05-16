@@ -140,27 +140,39 @@
   "team": [
     {
       "name": "Muhammad Hamza",
-      "position": "Senior Patrol Leader",
+      "level": 4,
+      "levelTitle": "President",
+      "position": "President",
       "bio": "Coordinates patrol training, induction discipline, and event command.",
-      "photoClass": "p1"
+      "photoClass": "p1",
+      "whatsapp": "https://wa.me/923000000000"
     },
     {
       "name": "Ayesha Noor",
-      "position": "Troop Guide",
+      "level": 5,
+      "levelTitle": "Vice President",
+      "position": "Vice President",
       "bio": "Leads mentoring, welfare campaigns, and scout learning circles.",
-      "photoClass": "p2"
+      "photoClass": "p2",
+      "whatsapp": "https://wa.me/923000000000"
     },
     {
       "name": "Usman Ali",
+      "level": 6,
+      "levelTitle": "Group Cabinet and Council",
       "position": "Rescue Training Lead",
       "bio": "Manages first aid drills, safety briefings, and emergency practice.",
-      "photoClass": "p3"
+      "photoClass": "p3",
+      "whatsapp": "https://wa.me/923000000000"
     },
     {
       "name": "Sana Tariq",
+      "level": 6,
+      "levelTitle": "Group Cabinet and Council",
       "position": "Volunteer Coordinator",
       "bio": "Organizes community service rosters and partner outreach.",
-      "photoClass": "p4"
+      "photoClass": "p4",
+      "whatsapp": "https://wa.me/923000000000"
     }
   ],
   "news": [

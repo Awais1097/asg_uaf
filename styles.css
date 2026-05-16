@@ -615,6 +615,17 @@ blockquote {
   margin-bottom: 22px;
   background-size: cover;
   background-position: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: color-mix(in srgb, var(--forest), transparent 90%);
 }
 
 .campfire { background: radial-gradient(circle at 42% 74%, #f2b251 0 7%, #78351e 8% 12%, transparent 13%), linear-gradient(160deg, #14251b, #557a45 48%, #c99f55); }
@@ -727,6 +738,19 @@ blockquote {
 
 .event-card p {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.event-inline-image {
+  width: min(320px, 100%);
+  aspect-ratio: 16 / 9;
+  margin: 0 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
 }
 
 .event-register {
@@ -979,10 +1003,57 @@ blockquote {
   padding: 18px;
 }
 
+.team-levels-overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: -18px auto 30px;
+}
+
+.team-levels-overview span {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--glass);
+  color: var(--forest);
+  font-size: 0.84rem;
+  font-weight: 900;
+  backdrop-filter: blur(12px);
+}
+
+.team-section .team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.team-level-section {
+  display: grid;
+  gap: 16px;
+}
+
+.team-level-section > h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid color-mix(in srgb, var(--gold), transparent 48%);
+  color: var(--forest);
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+}
+
+.team-level-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .profile-photo {
   height: 210px;
   border-radius: var(--radius);
   margin-bottom: 18px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 .p1 { background: radial-gradient(circle at 50% 28%, #e7c49e 0 13%, transparent 14%), linear-gradient(155deg, #173923 0 55%, #d4a74d 56%); }
@@ -993,6 +1064,32 @@ blockquote {
 .profile-card span {
   color: var(--green);
   font-weight: 900;
+}
+
+.team-level {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--gold), transparent 80%);
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  width: fit-content;
+  margin-top: 14px;
+  padding: 9px 13px;
+  border-radius: var(--radius);
+  background: #25d366;
+  color: #062413;
+  font-weight: 950;
 }
 
 .socials {
@@ -1221,6 +1318,17 @@ summary {
 
 .news-card {
   padding: 24px;
+}
+
+.news-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 18px;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--forest), transparent 90%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 .news-card span {
@@ -1593,6 +1701,7 @@ blockquote cite {
   }
 
   .team-grid,
+  .team-level-grid,
   .partners,
   .site-footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1705,6 +1814,7 @@ blockquote cite {
   .activity-grid,
   .detail-grid,
   .team-grid,
+  .team-level-grid,
   .blog-grid,
   .testimonial-grid,
   .stats-band,

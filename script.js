@@ -39,11 +39,16 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function imageStyleFromBase64(value) {
+function imageSourceFromBase64(value) {
   const text = String(value || "").trim();
   if (!text) return "";
-  const source = text.startsWith("data:") ? text : `data:image/png;base64,${text}`;
-  return ` style="background-image: linear-gradient(135deg, rgba(8, 46, 28, 0.2), rgba(214, 168, 79, 0.18)), url('${escapeHtml(source)}')"`;
+  return text.startsWith("data:") ? text : `data:image/png;base64,${text}`;
+}
+
+function base64ImageMarkup(value, className, alt) {
+  const source = imageSourceFromBase64(value);
+  if (!source) return "";
+  return `<img class="${className}" src="${escapeHtml(source)}" alt="${escapeHtml(alt)}" loading="lazy" />`;
 }
 
 function renderActivities(activities) {
@@ -53,7 +58,7 @@ function renderActivities(activities) {
     .map(
       (activity) => `
         <article class="activity-card reveal">
-          <div class="card-image ${escapeHtml(activity.imageClass)}"${imageStyleFromBase64(activity.imageBase64)}></div>
+          <div class="card-image ${escapeHtml(activity.imageClass)}">${base64ImageMarkup(activity.imageBase64, "full-image", activity.title)}</div>
           <div class="icon-badge">${escapeHtml(activity.icon)}</div>
           <h3>${escapeHtml(activity.title)}</h3>
           <p>${escapeHtml(activity.description)}</p>
@@ -75,6 +80,7 @@ function renderEvents(data) {
         (event, index) => `
           <article class="event-card${index === 0 ? " is-active" : ""}">
             <div class="event-date"><b>${escapeHtml(event.day)}</b><span>${escapeHtml(event.month)}</span></div>
+            ${event.imageBase64 ? `<div class="event-inline-image">${base64ImageMarkup(event.imageBase64, "full-image", event.title)}</div>` : ""}
             <h3>${escapeHtml(event.title)}</h3>
             <p>${escapeHtml(event.description)}</p>
             <button class="event-register" type="button" data-event-register>Register Now</button>
@@ -127,18 +133,55 @@ function renderStats(stats) {
 function renderTeam(team) {
   const grid = document.querySelector(".team-grid");
   if (!grid || !Array.isArray(team)) return;
-  grid.innerHTML = team
-    .map(
-      (member) => `
+  const levels = [
+    "Founder President",
+    "Patron in Chief",
+    "Patron",
+    "Vice Patron",
+    "President",
+    "Vice President",
+    "Group Cabinet and Council",
+    "Senior of ASG",
+  ];
+  const normalizedLevel = (member) => {
+    const level = Number(member.level);
+    return Number.isInteger(level) && level >= 0 && level <= 7 ? level : 6;
+  };
+  const sorted = [...team].sort((a, b) => normalizedLevel(a) - normalizedLevel(b));
+  const grouped = levels
+    .map((title, level) => ({
+      level,
+      title,
+      members: sorted.filter((member) => normalizedLevel(member) === level),
+    }))
+    .filter((group) => group.members.length);
+
+  grid.innerHTML = grouped
+    .map((group) => {
+      const cards = group.members
+        .map((member) => {
+          const level = normalizedLevel(member);
+          const levelTitle = member.levelTitle || levels[level] || member.position || "Team Member";
+          const whatsapp = String(member.whatsapp || "").trim();
+          return `
         <article class="profile-card reveal">
-          <div class="profile-photo ${escapeHtml(member.photoClass)}"${imageStyleFromBase64(member.imageBase64)}></div>
+          <div class="profile-photo ${escapeHtml(member.photoClass)}">${base64ImageMarkup(member.imageBase64, "full-image", member.name)}</div>
+          <small class="team-level">${Number.isFinite(level) ? `${level}. ` : ""}${escapeHtml(levelTitle)}</small>
           <h3>${escapeHtml(member.name)}</h3>
           <span>${escapeHtml(member.position)}</span>
           <p>${escapeHtml(member.bio)}</p>
-          <div class="socials"><a href="https://www.facebook.com/AgrivarsityScoutsGroupUAF/" aria-label="Facebook">f</a><a href="https://linkedin.com" aria-label="LinkedIn">in</a><a href="mailto:scouts@uaf.edu.pk" aria-label="Email">@</a></div>
+          ${whatsapp ? `<a class="whatsapp-link" href="${escapeHtml(whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>` : ""}
         </article>
-      `
-    )
+      `;
+        })
+        .join("");
+      return `
+        <section class="team-level-section reveal">
+          <h3>${group.level}. ${escapeHtml(group.title)}</h3>
+          <div class="team-level-grid">${cards}</div>
+        </section>
+      `;
+    })
     .join("");
 }
 
@@ -149,6 +192,7 @@ function renderNews(news) {
     .map(
       (item) => `
         <article class="news-card reveal">
+          ${item.imageBase64 ? `<div class="news-image">${base64ImageMarkup(item.imageBase64, "full-image", item.title)}</div>` : ""}
           <span>${escapeHtml(item.category)}</span>
           <h3>${escapeHtml(item.title)}</h3>
           <p>${escapeHtml(item.description)}</p>
