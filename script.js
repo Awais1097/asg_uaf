@@ -39,6 +39,13 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function imageStyleFromBase64(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  const source = text.startsWith("data:") ? text : `data:image/png;base64,${text}`;
+  return ` style="background-image: linear-gradient(135deg, rgba(8, 46, 28, 0.2), rgba(214, 168, 79, 0.18)), url('${escapeHtml(source)}')"`;
+}
+
 function renderActivities(activities) {
   const grid = document.querySelector(".activity-grid");
   if (!grid || !Array.isArray(activities)) return;
@@ -46,7 +53,7 @@ function renderActivities(activities) {
     .map(
       (activity) => `
         <article class="activity-card reveal">
-          <div class="card-image ${escapeHtml(activity.imageClass)}"></div>
+          <div class="card-image ${escapeHtml(activity.imageClass)}"${imageStyleFromBase64(activity.imageBase64)}></div>
           <div class="icon-badge">${escapeHtml(activity.icon)}</div>
           <h3>${escapeHtml(activity.title)}</h3>
           <p>${escapeHtml(activity.description)}</p>
@@ -124,7 +131,7 @@ function renderTeam(team) {
     .map(
       (member) => `
         <article class="profile-card reveal">
-          <div class="profile-photo ${escapeHtml(member.photoClass)}"></div>
+          <div class="profile-photo ${escapeHtml(member.photoClass)}"${imageStyleFromBase64(member.imageBase64)}></div>
           <h3>${escapeHtml(member.name)}</h3>
           <span>${escapeHtml(member.position)}</span>
           <p>${escapeHtml(member.bio)}</p>
@@ -176,11 +183,22 @@ function refreshDynamicBindings() {
   bindGalleryFilterButtons();
 }
 
+const SITE_DATA_URL = "https://api.npoint.io/3d1c1e019437f2b8b822";
+
+async function fetchJson(url) {
+  const response = await fetch(url, { cache: "no-store" });
+  if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
+  return response.json();
+}
+
 async function loadSiteData() {
   try {
-    const response = await fetch("data/site-data.json", { cache: "no-store" });
-    if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
-    const data = await response.json();
+    let data;
+    try {
+      data = await fetchJson(SITE_DATA_URL);
+    } catch {
+      data = await fetchJson("data/site-data.json");
+    }
     renderActivities(data.activities);
     renderEvents(data);
     renderStats(data.stats);
